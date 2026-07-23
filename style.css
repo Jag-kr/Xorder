@@ -1,0 +1,166 @@
+:root {
+  --primary-bg: hsl(225, 100%, 94%);
+  --btn-bg: hsl(245, 75%, 52%);
+  --btn-hover: hsl(245, 75%, 65%);
+  --plan-bg: hsl(225, 100%, 98%);
+  --text-primary: hsl(223, 47%, 23%);
+  --text-secondary: hsl(224, 23%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--primary-bg);
+  background-image: url('images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url('images/pattern-background-mobile.svg');
+  }
+}
+
+.main {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  padding: 48px;
+  text-align: center;
+}
+
+.heading {
+  color: var(--text-primary);
+  font-weight: 900;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+}
+
+.summary-para {
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.plan-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--plan-bg);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.plan-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.plan-title {
+  color: var(--text-primary);
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.plan-price {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.change-link {
+  margin-left: auto;
+}
+
+.change-link a {
+  color: var(--btn-bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.change-link a:hover {
+  text-decoration: none;
+  color: var(--btn-hover);
+}
+
+.proceed-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.proceed-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.cancel-order {
+  display: inline-block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.cancel-order:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 450px) {
+  .content {
+    padding: 32px 24px;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .plan-container {
+    padding: 16px;
+  }
+}
